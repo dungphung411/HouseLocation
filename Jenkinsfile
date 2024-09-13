@@ -17,9 +17,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'ready to serve'
-                sh 'npm install --force'
                 
+                sh 'npm install --force'
+                echo 'Install sucessful. Run npm start to start the application'
             }
         }
          stage('Test') {
