@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'sudo su'
                 sh 'chmod +x Installscript.sh'
-                sh '/var/lib/jenkins/workspace/House Location/Installscript.sh' 
+                sh '/var/lib/jenkins/workspace/HouseLocation/Installscript.sh' 
             }
         }
         stage('Build') {
