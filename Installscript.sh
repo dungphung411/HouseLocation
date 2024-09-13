@@ -6,7 +6,7 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
 sudo -S apt install -y nodejs
   
-sudo npm install -g @angular/cli -y   #chau fix dc loi bat buoc phai chay root de install ( have to manual install using root )
+sudo npm install -g @angular/cli -y    #khong on dinh, van nen tu chay command nay thu cong de cai angular ( have to manual install using root )
 
 sudo -y apt autoremove
 
