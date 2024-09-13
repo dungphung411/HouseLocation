@@ -23,7 +23,6 @@ pipeline {
             steps {
                 script {
                     sh 'npm install --force'
-                    echo 'Ready to serve'
                 }
             }
         }
