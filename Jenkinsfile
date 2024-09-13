@@ -13,31 +13,29 @@ pipeline {
                 sh 'sudo su'
                 sh 'chmod +x Installscript.sh'
                 sh '/var/lib/jenkins/workspace/HouseLocation/Installscript.sh' 
-                sh 'echo $(pwd)'
-                 
             }
         }
-        // stage('Build') {
-        //     steps {
-        //         echo 'ready to serve'
-        //         bash 'npm install --force'
+        stage('Build') {
+            steps {
+                echo 'ready to serve'
+                bash 'npm install --force'
                 
-        //     }
-        // }
-        //  stage('Test') {
-        //     steps {
-        //         echo 'Testing..'
-        //     }
-        // }
-        // stage('Deploy') {
-        //     steps {
-        //         sh 'chmod +x runscript.sh '
-        //         echo 'Deploying....'
-        //         sh './runscript.sh'
+            }
+        }
+         stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'chmod +x runscript.sh '
+                echo 'Deploying....'
+                sh './runscript.sh'
 
                 
-        //     }
-        // }
+            }
+        }
 
     }
 }
