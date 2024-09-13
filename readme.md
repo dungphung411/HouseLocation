@@ -24,4 +24,6 @@ B. Step run pipeline
 4. ng serve 
 
 You can see the pipeline step in the Jenkinsfile <br>
+
+<br>
 IMPORTANT: Jenkinsfile is designed for linux system. if you using a Window jenkins, consider check each steps an replace, delete some of the linux code ( example: change 'sh' to 'bat')
