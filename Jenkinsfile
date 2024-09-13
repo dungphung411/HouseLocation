@@ -22,7 +22,7 @@ pipeline {
                                     
                     sh " sudo npm install --force" || true
                    // sh "npm audit fix --force" || true 
-                    echo "Ready to serve"u
+                    echo "Ready to serve"
                     
             }
         }
