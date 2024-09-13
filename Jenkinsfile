@@ -23,8 +23,6 @@ pipeline {
             steps {                
                     sh 'sudo npm install --force' 
                     echo 'Ready to serve' 
-                    }
-                    
             }
         }
          stage('Test') {
