@@ -22,6 +22,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    echo 'ready to serve'
                     sh 'npm install --force'
                 }
             }
