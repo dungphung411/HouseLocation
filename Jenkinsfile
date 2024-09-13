@@ -17,7 +17,7 @@ pipeline {
 
                 sh '/var/lib/jenkins/workspace/HouseLocation/Installscript.sh' 
                 
-                echo $(pwd)
+                sh 'echo $(pwd)'
                  
             }
         }
