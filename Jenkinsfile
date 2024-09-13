@@ -19,10 +19,12 @@ pipeline {
                  
             }
         }
-         stage('Build') {
-            steps {                
-                    sh ' npm install --force' 
-                    echo 'Ready to serve' 
+        stage('Build') {
+            steps {
+                script {
+                    sh 'npm install --force'
+                    echo 'Ready to serve'
+                }
             }
         }
          stage('Test') {
