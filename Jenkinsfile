@@ -20,9 +20,8 @@ pipeline {
             }
         }
          stage('Build') {
-            steps {
-                                    
-                    sh " sudo npm install --force" || true
+            steps {                
+                    sh "sudo npm install --force" 
                     echo "Ready to serve"
                     
             }
