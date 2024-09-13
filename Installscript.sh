@@ -13,7 +13,7 @@ sudo -y apt autoremove
 echo $(node --version) 
 echo $(npm --version)
 echo $(sudo ng version)
-
+echo $(pwd)
 
 #nghich xong co the xoa node voi angular di khoi may linux, desau nay chay lai pipeline cho lau nhin cho thich.
 # xoa angular truoc xoa nodejs sau
