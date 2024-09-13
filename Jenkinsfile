@@ -31,7 +31,8 @@ pipeline {
             steps {
                 sh 'chmod +x runscript.sh '
                 echo 'Deploying....'
-                sh './runscript.sh'
+                sh 'ng serve'
+                //sh './runscript.sh'
 
                 
             }
