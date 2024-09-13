@@ -4,36 +4,33 @@ pipeline {
     stages {
         stage('Git checkout') {
             steps{
-                git branch: 'main', changelog: false, credentialsId: 'jenkins-gitlab-user', poll: false, url: 'http://10.32.4.100:8888/dz/houselocation.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/dungphung411/HouseLocation.git'
                 echo "Git check successfully" 
             }
         }
         stage('Install prebuild') {
             steps {
-
-                sh 'chmod +x Installscript.sh'
-
-                sh '/var/lib/jenkins/workspace/HouseLocation/Installscript.sh' 
+                powershell './Installscript.ps1' 
                  
             }
         }
          stage('Build') {
             steps {
-                                    
-                    sh " sudo npm install --force" || true
+                    bat " npm install --force" 
                     echo "Ready to serve"
                     
             }
         }
-        // stage('Test') {
-        //     steps {
-        //         echo 'Testing..'
-        //     }
-        // }
-        // stage('Deploy') {
-        //     steps {
-        //         echo 'Deploying....'
-        //     }
-        // }
+         stage('Test') {
+             steps {
+                 echo 'Testing..'
+             }
+         }
+         stage('Deploy') {
+             steps {
+                 echo 'Deploying....'
+                 powershell './runscript.bat'
+             }
+         }
     }
 }
