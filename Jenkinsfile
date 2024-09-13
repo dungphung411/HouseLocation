@@ -1,4 +1,4 @@
-projectpath = "/var/lib/jenkins/workspace/HouseLocation"
+
 pipeline {
     agent any
     stages {
@@ -21,7 +21,6 @@ pipeline {
             steps {
                                     
                     sh " sudo npm install --force" || true
-                   // sh "npm audit fix --force" || true 
                     echo "Ready to serve"
                     
             }
