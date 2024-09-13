@@ -1,9 +1,10 @@
 A. For local test 
+
     1. Install depedancy :    
 
             -(Window) run command : ./Installscript.ps1    ( read thoroughtly the file Installscript.ps1 to know what to do) 
             -(Linux) run command : sudo sh Installscript.sh ( you may have to cd to the working directory, and run this first: chmod +x Installscript.sh )
-            
+
     2. Cd to the working directory, run command: ( if you use linux then sudo su first)
 
             -npm install --force   
