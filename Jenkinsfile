@@ -11,6 +11,8 @@ pipeline {
         stage('Install prebuild') {
             steps {
 
+                sh 'sudo su'
+
                 sh 'chmod +x Installscript.sh'
 
                 sh '/var/lib/jenkins/workspace/HouseLocation/Installscript.sh' 
@@ -25,15 +27,20 @@ pipeline {
                     
             }
         }
-        // stage('Test') {
-        //     steps {
-        //         echo 'Testing..'
-        //     }
-        // }
-        // stage('Deploy') {
-        //     steps {
-        //         echo 'Deploying....'
-        //     }
-        // }
+         stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'chmod +x runscript.sh '
+                echo 'Deploying....'
+                sh './runscript.sh'
+
+                
+            }
+        }
+
     }
 }
