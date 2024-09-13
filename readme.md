@@ -13,7 +13,7 @@ A. For local test
 
             -npm start 
             -follow the link that the cli generate (x.x.x.x:4200)
-    
+
 
 B. Step run pipeline 
 
@@ -26,4 +26,4 @@ B. Step run pipeline
 You can see the pipeline step in the Jenkinsfile <br>
 
 <br>
-IMPORTANT: Jenkinsfile is designed for linux system. If you using a Window jenkins, consider check each steps an replace, delete some of the linux code ( example: change 'sh' to 'bat', remove 'sudo')
+IMPORTANT: Jenkinsfile in main is designed for linux system. If you using a Window jenkins, change to the window branch and download the jenkinsfile
