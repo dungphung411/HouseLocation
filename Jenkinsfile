@@ -3,8 +3,8 @@ pipeline {
     agent any
     stages {
         stage('Git checkout') {
-            steps{
-                git branch: 'main', changelog: false, credentialsId: 'jenkins-gitlab-user', poll: false, url: 'http://10.32.4.100:8888/dz/houselocation.git'
+            steps {
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/dungphung411/HouseLocation.git'
                 echo "Git check successfully" 
             }
         }
