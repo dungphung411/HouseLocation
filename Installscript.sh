@@ -13,3 +13,14 @@ sudo -y apt autoremove
 echo $(node --version) 
 echo $(npm --version)
 echo $(ng version)
+
+
+#nghich xong co the xoa node voi angular di khoi may linux, desau nay chay lai pipeline cho lau nhin cho thich.
+# xoa angular truoc xoa nodejs sau
+# npm uninstall -g @angular/cli
+# npm cache clean --force
+# sudo rm -rf node_modules
+# sudo rm -rf ~/.npm
+# sudo rm -rf ~/.node-gyp
+
+#sudo apt remove nodejs -y
