@@ -40,7 +40,7 @@ pipeline {
         }
          stage('Publish') {
             step {
-                sh 'dotnet publish'
+                sh 'npm build'
             
             }
          }
