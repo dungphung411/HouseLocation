@@ -29,14 +29,21 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                timeout(time: 3 , unit: 'MINUTES'){
                 sh 'chmod +x runscript.sh '
                 echo 'Deploying....'
-                sh 'ng build '
-                //sh './runscript.sh'
+                sh './runscript.sh'
+                }
 
                 
             }
         }
+         stage('Publish') {
+            step {
+                sh 'dotnet publish'
+            
+            }
+         }
 
     }
 }
