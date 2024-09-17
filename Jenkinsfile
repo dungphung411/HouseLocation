@@ -30,7 +30,14 @@ pipeline {
              steps {
                  timeout(time: 3, unit: 'MINUTES') {
                  echo 'Deploying....'
-                 powershell './runscript.bat'
+                 try {
+                    ./runscript.bat -ErrorAction Stop
+                     Write-Output "Script executed successfully."
+                } catch {
+                    Write-Output "Script execution failed. Continuing with the next steps."
+    
+                    }    
+
                  }
              }
          }
