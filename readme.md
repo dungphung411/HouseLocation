@@ -17,7 +17,7 @@ A. For local test
 
 B. Step run pipeline 
 
-
+There're 4 stage 
 1.  npm install   ( use --force if needed)
 2.  npm install -g json-server
 3. json-server --watch db.json
