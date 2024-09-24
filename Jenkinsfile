@@ -40,7 +40,7 @@ pipeline {
         }
          stage('Publish') {
             steps{
-                sh 'npm build'
+                sh 'sudo ng build'
             
             }
          }
