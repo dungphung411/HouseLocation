@@ -39,7 +39,7 @@ pipeline {
             }
         }
          stage('Publish') {
-            step {
+            steps{
                 sh 'npm build'
             
             }
